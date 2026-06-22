@@ -1,25 +1,36 @@
-import { Button } from "@/components/ui/button";
-import { Loader2 } from "lucide-react";
-import { Streamdown } from 'streamdown';
+import Header from '@/components/Header';
+import HeroSection from '@/components/HeroSection';
+import PortfolioGallery from '@/components/PortfolioGallery';
+import AboutSection from '@/components/AboutSection';
+import ServicesSection from '@/components/ServicesSection';
+import ContactSection from '@/components/ContactSection';
+import Footer from '@/components/Footer';
+import CinematicDivider from '@/components/CinematicDivider';
 
-/**
- * All content in this page are only for example, replace with your own feature implementation
- * When building pages, remember your instructions in Frontend Best Practices, Design Guide and Common Pitfalls
- */
 export default function Home() {
-  // If theme is switchable in App.tsx, we can implement theme toggling like this:
-  // const { theme, toggleTheme } = useTheme();
-
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen bg-black">
+      <Header />
       <main>
-        {/* Example: lucide-react for icons */}
-        <Loader2 className="animate-spin" />
-        Example Page
-        {/* Example: Streamdown for markdown rendering */}
-        <Streamdown>Any **markdown** content</Streamdown>
-        <Button variant="default">Example Button</Button>
+        <HeroSection />
+        <div className="py-8 px-4">
+          <CinematicDivider />
+        </div>
+        <PortfolioGallery />
+        <div className="py-8 px-4">
+          <CinematicDivider />
+        </div>
+        <AboutSection />
+        <div className="py-8 px-4">
+          <CinematicDivider />
+        </div>
+        <ServicesSection />
+        <div className="py-8 px-4">
+          <CinematicDivider />
+        </div>
+        <ContactSection />
       </main>
+      <Footer />
     </div>
   );
 }
