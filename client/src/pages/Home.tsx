@@ -11,6 +11,11 @@ import ProcessSection from '@/components/ProcessSection';
 import PricingSection from '@/components/PricingSection';
 import StatsSection from '@/components/StatsSection';
 import LatestWorkSection from '@/components/LatestWorkSection';
+import ExpertiseSection from '@/components/ExpertiseSection';
+import AwardsSection from '@/components/AwardsSection';
+import BehindTheScenesSection from '@/components/BehindTheScenesSection';
+import CollaborationSection from '@/components/CollaborationSection';
+import FAQSection from '@/components/FAQSection';
 
 export default function Home() {
   return (
@@ -42,6 +47,26 @@ export default function Home() {
           <CinematicDivider />
         </div>
         <PricingSection />
+        <div className="py-8 px-4">
+          <CinematicDivider />
+        </div>
+        <ExpertiseSection />
+        <div className="py-8 px-4">
+          <CinematicDivider />
+        </div>
+        <AwardsSection />
+        <div className="py-8 px-4">
+          <CinematicDivider />
+        </div>
+        <BehindTheScenesSection />
+        <div className="py-8 px-4">
+          <CinematicDivider />
+        </div>
+        <CollaborationSection />
+        <div className="py-8 px-4">
+          <CinematicDivider />
+        </div>
+        <FAQSection />
         <div className="py-8 px-4">
           <CinematicDivider />
         </div>

@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
+import { Camera, Users, Award, Zap } from 'lucide-react';
 
 const stats = [
   {
@@ -7,28 +8,28 @@ const stats = [
     label: 'Projects Completed',
     value: 250,
     suffix: '+',
-    icon: '📸',
+    icon: Camera,
   },
   {
     id: 2,
     label: 'Happy Clients',
     value: 180,
     suffix: '+',
-    icon: '😊',
+    icon: Users,
   },
   {
     id: 3,
     label: 'Awards Won',
     value: 35,
     suffix: '',
-    icon: '🏆',
+    icon: Award,
   },
   {
     id: 4,
     label: 'Years Experience',
     value: 12,
     suffix: '+',
-    icon: '⭐',
+    icon: Zap,
   },
 ];
 
@@ -100,7 +101,7 @@ export default function StatsSection() {
           }}
           transition={{ duration: 15, repeat: Infinity, repeatType: 'reverse' }}
           style={{
-            backgroundImage: 'linear-gradient(45deg, #B8860B 1px, transparent 1px)',
+            backgroundImage: 'linear-gradient(45deg, #A0A0A0 1px, transparent 1px)',
             backgroundSize: '40px 40px',
           }}
           className="absolute inset-0"
@@ -116,9 +117,9 @@ export default function StatsSection() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <p className="text-gray-500 text-sm uppercase tracking-widest mb-4">By The Numbers</p>
+          <p className="text-gray-500 text-xs uppercase tracking-widest mb-4 font-medium">By The Numbers</p>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-playfair">
-            Our <span className="text-gray-500">Impact</span>
+            Our <span className="text-gray-300">Impact</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             A testament to our commitment to excellence and client satisfaction
@@ -133,52 +134,55 @@ export default function StatsSection() {
           viewport={{ once: true }}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12"
         >
-          {stats.map((stat) => (
-            <motion.div
-              key={stat.id}
-              variants={itemVariants}
-              whileHover={{ y: -10, scale: 1.05 }}
-              className="relative p-8 rounded-lg bg-gradient-to-br from-gray-800/20 to-black border border-gray-500/30 hover:border-gray-500/60 transition-all duration-300 group overflow-hidden"
-            >
-              {/* Glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-gray-500/0 via-gray-500/10 to-gray-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-
-              {/* Content */}
-              <div className="relative z-10 text-center">
-                {/* Icon */}
-                <motion.div
-                  className="text-5xl mb-4"
-                  whileHover={{ scale: 1.2, rotate: 10 }}
-                >
-                  {stat.icon}
-                </motion.div>
-
-                {/* Counter */}
-                <motion.div
-                  className="mb-4"
-                  initial={{ scale: 0 }}
-                  whileInView={{ scale: 1 }}
-                  transition={{ type: 'spring', stiffness: 100 }}
-                >
-                  <span className="text-5xl font-bold text-gray-500 font-playfair">
-                    <AnimatedCounter target={stat.value} inView={isInView} />
-                    {stat.suffix}
-                  </span>
-                </motion.div>
-
-                {/* Label */}
-                <p className="text-gray-400 text-sm uppercase tracking-widest">{stat.label}</p>
-              </div>
-
-              {/* Bottom accent line */}
+          {stats.map((stat) => {
+            const IconComponent = stat.icon;
+            return (
               <motion.div
-                className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-gray-500/0 via-gray-500 to-gray-500/0"
-                initial={{ scaleX: 0 }}
-                whileInView={{ scaleX: 1 }}
-                transition={{ delay: 0.3 }}
-              />
-            </motion.div>
-          ))}
+                key={stat.id}
+                variants={itemVariants}
+                whileHover={{ y: -10, scale: 1.05 }}
+                className="relative p-8 rounded-lg bg-gradient-to-br from-gray-900/20 to-black border border-gray-700/30 hover:border-gray-600/60 transition-all duration-300 group overflow-hidden"
+              >
+                {/* Glow effect */}
+                <div className="absolute inset-0 bg-gradient-to-r from-gray-600/0 via-gray-600/10 to-gray-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+
+                {/* Content */}
+                <div className="relative z-10 text-center">
+                  {/* Icon */}
+                  <motion.div
+                    className="mb-4 flex justify-center"
+                    whileHover={{ scale: 1.2, rotate: 10 }}
+                  >
+                    <IconComponent size={40} className="text-gray-500 group-hover:text-gray-300 transition-colors" />
+                  </motion.div>
+
+                  {/* Counter */}
+                  <motion.div
+                    className="mb-4"
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ type: 'spring', stiffness: 100 }}
+                  >
+                    <span className="text-5xl font-bold text-gray-300 font-playfair">
+                      <AnimatedCounter target={stat.value} inView={isInView} />
+                      {stat.suffix}
+                    </span>
+                  </motion.div>
+
+                  {/* Label */}
+                  <p className="text-gray-400 text-sm uppercase tracking-widest">{stat.label}</p>
+                </div>
+
+                {/* Bottom accent line */}
+                <motion.div
+                  className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-gray-600/0 via-gray-600 to-gray-600/0"
+                  initial={{ scaleX: 0 }}
+                  whileInView={{ scaleX: 1 }}
+                  transition={{ delay: 0.3 }}
+                />
+              </motion.div>
+            );
+          })}
         </motion.div>
 
         {/* Achievement Section */}
@@ -187,7 +191,7 @@ export default function StatsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-gray-800/20 to-black border border-gray-500/30 p-12 rounded-lg text-center"
+          className="bg-gradient-to-r from-gray-900/20 to-black border border-gray-700/30 p-12 rounded-lg text-center"
         >
           <h3 className="text-2xl font-bold text-white mb-4 font-playfair">
             Featured in Top Photography Publications
@@ -200,7 +204,7 @@ export default function StatsSection() {
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: index * 0.1 }}
-                  className="text-sm font-semibold hover:text-gray-500 transition-colors"
+                  className="text-sm font-semibold hover:text-gray-200 transition-colors"
                 >
                   {publication}
                 </motion.div>
