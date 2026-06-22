@@ -2,6 +2,11 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
+interface NavItem {
+  label: string;
+  href: string;
+}
+
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -15,7 +20,13 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const navItems = ['Home', 'Portfolio', 'About', 'Services', 'Contact'];
+  const navItems: NavItem[] = [
+    { label: 'Portfolio', href: '#portfolio' },
+    { label: 'Process', href: '#process' },
+    { label: 'Pricing', href: '#pricing' },
+    { label: 'About', href: '#about' },
+    { label: 'Contact', href: '#contact' },
+  ];
 
   return (
     <motion.header
@@ -53,12 +64,12 @@ export default function Header() {
         <nav className="hidden md:flex gap-8">
           {navItems.map((item) => (
             <motion.a
-              key={item}
-              href={`#${item.toLowerCase()}`}
+              key={item.label}
+              href={item.href}
               whileHover={{ color: '#B8860B' }}
               className="text-sm uppercase tracking-widest text-gray-300 hover:text-amber-600 transition-colors"
             >
-              {item}
+              {item.label}
             </motion.a>
           ))}
         </nav>
@@ -92,12 +103,12 @@ export default function Header() {
           <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
             {navItems.map((item) => (
               <a
-                key={item}
-                href={`#${item.toLowerCase()}`}
+                key={item.label}
+                href={item.href}
                 className="text-sm uppercase tracking-widest text-gray-300 hover:text-amber-600 transition-colors"
                 onClick={() => setIsOpen(false)}
               >
-                {item}
+                {item.label}
               </a>
             ))}
             <button className="w-full px-4 py-2 border border-amber-600 text-amber-600 text-sm uppercase tracking-widest hover:bg-amber-600 hover:text-black transition-all">
