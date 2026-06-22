@@ -55,7 +55,7 @@ export default function LatestWorkSection() {
   return (
     <section id="latest-work" className="min-h-screen bg-black py-20 px-4 relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-0 right-0 w-96 h-96 bg-amber-600/5 rounded-full blur-3xl"></div>
+      <div className="absolute top-0 right-0 w-96 h-96 bg-gray-500/5 rounded-full blur-3xl"></div>
 
       <div className="container mx-auto max-w-7xl relative z-10">
         {/* Section Header */}
@@ -66,9 +66,9 @@ export default function LatestWorkSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="text-amber-600 text-sm uppercase tracking-widest mb-4">Recent Projects</p>
+          <p className="text-gray-500 text-sm uppercase tracking-widest mb-4">Recent Projects</p>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-playfair">
-            Latest <span className="text-amber-600">Work</span>
+            Latest <span className="text-gray-500">Work</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Explore our most recent cinematic creations and storytelling projects
@@ -119,7 +119,7 @@ export default function LatestWorkSection() {
                   animate={hoveredId === work.id ? { y: 0 } : { y: 20 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <p className="text-amber-600 text-xs uppercase tracking-widest mb-2">
+                  <p className="text-gray-500 text-xs uppercase tracking-widest mb-2">
                     {work.category}
                   </p>
                   <h3 className="text-2xl font-bold mb-2 font-playfair">{work.title}</h3>
@@ -127,7 +127,7 @@ export default function LatestWorkSection() {
 
                   {/* View More Link */}
                   <motion.div
-                    className="flex items-center gap-2 text-amber-600 font-semibold"
+                    className="flex items-center gap-2 text-gray-500 font-semibold"
                     animate={hoveredId === work.id ? { x: 5 } : { x: 0 }}
                   >
                     View Project
@@ -146,7 +146,7 @@ export default function LatestWorkSection() {
 
               {/* Bottom accent line */}
               <motion.div
-                className="h-1 bg-gradient-to-r from-amber-600 to-transparent"
+                className="h-1 bg-gradient-to-r from-gray-500 to-transparent"
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
                 transition={{ delay: 0.3 }}
@@ -163,7 +163,7 @@ export default function LatestWorkSection() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <button className="group px-8 py-3 border-2 border-amber-600 text-amber-600 font-semibold rounded hover:bg-amber-600 hover:text-black transition-all duration-300 flex items-center gap-2 mx-auto">
+          <button className="group px-8 py-3 border-2 border-gray-500 text-gray-500 font-semibold rounded hover:bg-gray-500 hover:text-black transition-all duration-300 flex items-center gap-2 mx-auto">
             View All Projects
             <ArrowRight
               size={18}

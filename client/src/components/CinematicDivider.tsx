@@ -11,7 +11,7 @@ export default function CinematicDivider({ className = '' }: CinematicDividerPro
       whileInView={{ opacity: 1, scaleX: 1 }}
       transition={{ duration: 1 }}
       viewport={{ once: true }}
-      className={`h-px bg-gradient-to-r from-transparent via-amber-600 to-transparent ${className}`}
+      className={`h-px bg-gradient-to-r from-transparent via-gray-500 to-transparent ${className}`}
     />
   );
 }

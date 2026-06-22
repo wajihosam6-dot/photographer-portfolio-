@@ -76,8 +76,8 @@ export default function PricingSection() {
   return (
     <section id="pricing" className="min-h-screen bg-black py-20 px-4 relative overflow-hidden">
       {/* Background elements */}
-      <div className="absolute top-20 right-10 w-72 h-72 bg-amber-600/10 rounded-full blur-3xl"></div>
-      <div className="absolute bottom-20 left-10 w-72 h-72 bg-amber-600/10 rounded-full blur-3xl"></div>
+      <div className="absolute top-20 right-10 w-72 h-72 bg-gray-500/10 rounded-full blur-3xl"></div>
+      <div className="absolute bottom-20 left-10 w-72 h-72 bg-gray-500/10 rounded-full blur-3xl"></div>
 
       <div className="container mx-auto max-w-7xl relative z-10">
         {/* Section Header */}
@@ -88,9 +88,9 @@ export default function PricingSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="text-amber-600 text-sm uppercase tracking-widest mb-4">Investment</p>
+          <p className="text-gray-500 text-sm uppercase tracking-widest mb-4">Investment</p>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-playfair">
-            Transparent <span className="text-amber-600">Pricing</span>
+            Transparent <span className="text-gray-500">Pricing</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Choose the perfect package for your needs. All packages include unlimited creativity.
@@ -114,8 +114,8 @@ export default function PricingSection() {
               whileHover={{ y: -20 }}
               className={`relative p-8 rounded-lg transition-all duration-300 ${
                 pkg.popular
-                  ? 'md:scale-105 bg-gradient-to-br from-amber-900/40 to-black border-2 border-amber-600 shadow-2xl shadow-amber-600/30'
-                  : 'bg-gradient-to-br from-amber-900/10 to-black border border-amber-600/20 hover:border-amber-600/50'
+                  ? 'md:scale-105 bg-gradient-to-br from-gray-800/40 to-black border-2 border-gray-500 shadow-2xl shadow-gray-500/30'
+                  : 'bg-gradient-to-br from-gray-800/10 to-black border border-gray-500/20 hover:border-gray-500/50'
               }`}
             >
               {/* Popular Badge */}
@@ -125,7 +125,7 @@ export default function PricingSection() {
                   animate={{ y: 0, opacity: 1 }}
                   className="absolute -top-4 left-1/2 transform -translate-x-1/2"
                 >
-                  <span className="bg-amber-600 text-black px-4 py-1 rounded-full text-xs font-bold uppercase">
+                  <span className="bg-gray-500 text-black px-4 py-1 rounded-full text-xs font-bold uppercase">
                     Most Popular
                   </span>
                 </motion.div>
@@ -140,7 +140,7 @@ export default function PricingSection() {
                 className="mb-8"
                 animate={hoveredId === pkg.id ? { scale: 1.1 } : { scale: 1 }}
               >
-                <span className="text-4xl font-bold text-amber-600">{pkg.price}</span>
+                <span className="text-4xl font-bold text-gray-500">{pkg.price}</span>
                 <span className="text-gray-400 text-sm ml-2">per project</span>
               </motion.div>
 
@@ -154,7 +154,7 @@ export default function PricingSection() {
                     transition={{ delay: index * 0.1 }}
                     className="flex items-center gap-3"
                   >
-                    <Check size={20} className="text-amber-600 flex-shrink-0" />
+                    <Check size={20} className="text-gray-500 flex-shrink-0" />
                     <span className="text-gray-300">{feature}</span>
                   </motion.li>
                 ))}
@@ -166,8 +166,8 @@ export default function PricingSection() {
                 whileTap={{ scale: 0.95 }}
                 className={`w-full py-3 rounded font-semibold transition-all duration-300 ${
                   pkg.popular
-                    ? 'bg-amber-600 text-black hover:bg-amber-500'
-                    : 'border border-amber-600 text-amber-600 hover:bg-amber-600/10'
+                    ? 'bg-gray-500 text-black hover:bg-gray-400'
+                    : 'border border-gray-500 text-gray-500 hover:bg-gray-500/10'
                 }`}
               >
                 Get Started
@@ -191,13 +191,13 @@ export default function PricingSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
           viewport={{ once: true }}
-          className="text-center bg-gradient-to-r from-amber-900/20 to-black border border-amber-600/30 p-8 rounded-lg"
+          className="text-center bg-gradient-to-r from-gray-800/20 to-black border border-gray-500/30 p-8 rounded-lg"
         >
           <h3 className="text-2xl font-bold text-white mb-3 font-playfair">Custom Package?</h3>
           <p className="text-gray-400 mb-6">
             Have a unique project in mind? Let's discuss a custom package tailored to your needs.
           </p>
-          <button className="px-8 py-3 bg-amber-600 text-black font-semibold rounded hover:bg-amber-500 transition-colors duration-300">
+          <button className="px-8 py-3 bg-gray-500 text-black font-semibold rounded hover:bg-gray-400 transition-colors duration-300">
             Request Custom Quote
           </button>
         </motion.div>

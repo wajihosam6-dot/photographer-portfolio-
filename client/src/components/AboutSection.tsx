@@ -52,13 +52,13 @@ export default function AboutSection() {
             className="space-y-6"
           >
             <motion.div variants={itemVariants}>
-              <p className="text-amber-600 text-sm uppercase tracking-widest mb-4">
+              <p className="text-gray-500 text-sm uppercase tracking-widest mb-4">
                 About Me
               </p>
               <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
                 I Capture
                 <br />
-                <span className="text-amber-600">Moments</span>
+                <span className="text-gray-500">Moments</span>
               </h2>
             </motion.div>
 
@@ -83,8 +83,8 @@ export default function AboutSection() {
 
             <motion.div variants={itemVariants} className="pt-6 space-y-4">
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-amber-600/20 rounded-full flex items-center justify-center">
-                  <span className="text-amber-600 font-bold text-xl">10+</span>
+                <div className="w-12 h-12 bg-gray-500/20 rounded-full flex items-center justify-center">
+                  <span className="text-gray-500 font-bold text-xl">10+</span>
                 </div>
                 <div>
                   <p className="text-white font-semibold">Years of Experience</p>
@@ -92,8 +92,8 @@ export default function AboutSection() {
                 </div>
               </div>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-amber-600/20 rounded-full flex items-center justify-center">
-                  <span className="text-amber-600 font-bold text-xl">500+</span>
+                <div className="w-12 h-12 bg-gray-500/20 rounded-full flex items-center justify-center">
+                  <span className="text-gray-500 font-bold text-xl">500+</span>
                 </div>
                 <div>
                   <p className="text-white font-semibold">Projects Completed</p>
@@ -101,8 +101,8 @@ export default function AboutSection() {
                 </div>
               </div>
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-amber-600/20 rounded-full flex items-center justify-center">
-                  <span className="text-amber-600 font-bold text-xl">15+</span>
+                <div className="w-12 h-12 bg-gray-500/20 rounded-full flex items-center justify-center">
+                  <span className="text-gray-500 font-bold text-xl">15+</span>
                 </div>
                 <div>
                   <p className="text-white font-semibold">Awards & Recognition</p>
@@ -115,7 +115,7 @@ export default function AboutSection() {
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="mt-8 px-8 py-3 bg-amber-600 text-black font-semibold uppercase tracking-widest hover:bg-amber-500 transition-all"
+              className="mt-8 px-8 py-3 bg-gray-500 text-black font-semibold uppercase tracking-widest hover:bg-gray-400 transition-all"
             >
               Learn More
             </motion.button>

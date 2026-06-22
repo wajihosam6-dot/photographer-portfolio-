@@ -35,15 +35,15 @@ export default function Header() {
       transition={{ duration: 0.8 }}
       className={`fixed top-0 w-full z-50 transition-all duration-300 ${
         isScrolled
-          ? 'bg-black/80 backdrop-blur-lg border-b border-amber-900/50'
-          : 'bg-black/50 backdrop-blur-md border-b border-amber-900/30'
+          ? 'bg-black/70 backdrop-blur-xl border-b border-gray-700/30'
+          : 'bg-black/40 backdrop-blur-md border-b border-gray-700/20'
       }`}
     >
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
         <motion.div
           whileHover={{ scale: 1.05 }}
-          className="flex items-center gap-2 cursor-pointer"
+          className="flex items-center gap-3 cursor-pointer"
         >
           <img
             src="/logo_mark.png"
@@ -51,23 +51,23 @@ export default function Header() {
             className="w-10 h-10"
           />
           <div className="hidden sm:block">
-            <h1 className="text-lg font-bold text-amber-600 tracking-widest">
+            <h1 className="text-lg font-bold text-gray-100 tracking-widest font-playfair">
               LUMIÈRE
             </h1>
-            <p className="text-xs text-amber-700/60 uppercase tracking-wider">
+            <p className="text-xs text-gray-500 uppercase tracking-wider">
               Photography
             </p>
           </div>
         </motion.div>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex gap-8">
+        <nav className="hidden md:flex gap-10">
           {navItems.map((item) => (
             <motion.a
               key={item.label}
               href={item.href}
-              whileHover={{ color: '#B8860B' }}
-              className="text-sm uppercase tracking-widest text-gray-300 hover:text-amber-600 transition-colors"
+              whileHover={{ color: '#E0E0E0' }}
+              className="text-xs uppercase tracking-widest text-gray-400 hover:text-gray-200 transition-colors font-medium"
             >
               {item.label}
             </motion.a>
@@ -76,9 +76,9 @@ export default function Header() {
 
         {/* CTA Button */}
         <motion.button
-          whileHover={{ scale: 1.05 }}
+          whileHover={{ scale: 1.05, backgroundColor: '#A0A0A0' }}
           whileTap={{ scale: 0.95 }}
-          className="hidden sm:block px-6 py-2 border border-amber-600 text-amber-600 text-sm uppercase tracking-widest hover:bg-amber-600 hover:text-black transition-all duration-300"
+          className="hidden sm:block px-6 py-2 border border-gray-600 text-gray-200 text-xs uppercase tracking-widest hover:bg-gray-700/50 transition-all duration-300 font-medium"
         >
           Book Session
         </motion.button>
@@ -86,7 +86,7 @@ export default function Header() {
         {/* Mobile Menu Button */}
         <button
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-amber-600"
+          className="md:hidden text-gray-300"
         >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
@@ -98,20 +98,20 @@ export default function Header() {
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: 'auto' }}
           exit={{ opacity: 0, height: 0 }}
-          className="md:hidden bg-black/80 border-t border-amber-900/30"
+          className="md:hidden bg-black/80 border-t border-gray-700/30"
         >
           <div className="container mx-auto px-4 py-4 flex flex-col gap-4">
             {navItems.map((item) => (
               <a
                 key={item.label}
                 href={item.href}
-                className="text-sm uppercase tracking-widest text-gray-300 hover:text-amber-600 transition-colors"
+                className="text-xs uppercase tracking-widest text-gray-400 hover:text-gray-200 transition-colors font-medium"
                 onClick={() => setIsOpen(false)}
               >
                 {item.label}
               </a>
             ))}
-            <button className="w-full px-4 py-2 border border-amber-600 text-amber-600 text-sm uppercase tracking-widest hover:bg-amber-600 hover:text-black transition-all">
+            <button className="w-full px-4 py-2 border border-gray-600 text-gray-200 text-xs uppercase tracking-widest hover:bg-gray-700/50 transition-all font-medium">
               Book Session
             </button>
           </div>

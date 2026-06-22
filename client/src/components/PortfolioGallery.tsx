@@ -85,13 +85,13 @@ export default function PortfolioGallery() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="text-amber-600 text-sm uppercase tracking-widest mb-4">
+          <p className="text-gray-500 text-xs uppercase tracking-widest mb-4 font-medium">
             Our Work
           </p>
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
+          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 font-playfair">
             Portfolio
           </h2>
-          <p className="text-gray-400 text-lg max-w-2xl mx-auto">
+          <p className="text-gray-400 text-lg max-w-2xl mx-auto leading-relaxed">
             A curated collection of our finest work, showcasing moments that matter
           </p>
         </motion.div>
@@ -110,10 +110,10 @@ export default function PortfolioGallery() {
               onClick={() => setSelectedCategory(cat)}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className={`px-6 py-2 uppercase text-sm tracking-widest transition-all ${
+              className={`px-6 py-2 uppercase text-xs tracking-widest transition-all font-medium ${
                 selectedCategory === cat
-                  ? 'bg-amber-600 text-black'
-                  : 'border border-amber-600 text-amber-600 hover:bg-amber-600/10'
+                  ? 'bg-gray-600 text-white'
+                  : 'border border-gray-600 text-gray-400 hover:text-gray-200 hover:border-gray-500'
               }`}
             >
               {cat}
@@ -150,7 +150,7 @@ export default function PortfolioGallery() {
                   whileHover={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.3 }}
                 >
-                  <p className="text-amber-600 text-xs uppercase tracking-widest mb-2">
+                  <p className="text-gray-500 text-xs uppercase tracking-widest mb-2">
                     {item.category}
                   </p>
                   <h3 className="text-white text-xl font-bold">{item.title}</h3>
@@ -171,7 +171,7 @@ export default function PortfolioGallery() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 border border-amber-600 text-amber-600 font-semibold uppercase tracking-widest hover:bg-amber-600 hover:text-black transition-all"
+            className="px-8 py-3 border border-gray-500 text-gray-500 font-semibold uppercase tracking-widest hover:bg-gray-500 hover:text-black transition-all"
           >
             View Full Portfolio
           </motion.button>

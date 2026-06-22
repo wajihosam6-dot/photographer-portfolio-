@@ -2,7 +2,7 @@
 @import "tw-animate-css";
 
 /* Google Fonts for Cinematic Portfolio */
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&family=Lora:wght@400;500;600;700&display=swap');
 
 @custom-variant dark (&:is(.dark *));
 
@@ -46,57 +46,57 @@
 }
 
 :root {
-  --primary: #B8860B;
+  --primary: #A0A0A0;
   --primary-foreground: #FFFFFF;
-  --sidebar-primary: #B8860B;
+  --sidebar-primary: #A0A0A0;
   --sidebar-primary-foreground: #FFFFFF;
-  --chart-1: #B8860B;
-  --chart-2: #CD7F32;
-  --chart-3: #DAA520;
-  --chart-4: #B8860B;
-  --chart-5: #8B6914;
+  --chart-1: #A0A0A0;
+  --chart-2: #B8B8B8;
+  --chart-3: #C0C0C0;
+  --chart-4: #A0A0A0;
+  --chart-5: #888888;
   --radius: 0.5rem;
-  --background: #0A0A0A;
-  --foreground: #F0F0F0;
+  --background: #0F0F0F;
+  --foreground: #F5F5F5;
   --card: #1A1A1A;
-  --card-foreground: #F0F0F0;
+  --card-foreground: #F5F5F5;
   --popover: #1A1A1A;
-  --popover-foreground: #F0F0F0;
+  --popover-foreground: #F5F5F5;
   --secondary: #2A2A2A;
-  --secondary-foreground: #A0A0A0;
+  --secondary-foreground: #B0B0B0;
   --muted: #3A3A3A;
-  --muted-foreground: #808080;
-  --accent: #B8860B;
+  --muted-foreground: #909090;
+  --accent: #A0A0A0;
   --accent-foreground: #FFFFFF;
   --destructive: #EF4444;
   --destructive-foreground: #FFFFFF;
   --border: #2A2A2A;
   --input: #2A2A2A;
-  --ring: #B8860B;
-  --sidebar: #0A0A0A;
-  --sidebar-foreground: #F0F0F0;
-  --sidebar-accent: #B8860B;
+  --ring: #A0A0A0;
+  --sidebar: #0F0F0F;
+  --sidebar-foreground: #F5F5F5;
+  --sidebar-accent: #A0A0A0;
   --sidebar-accent-foreground: #FFFFFF;
   --sidebar-border: #2A2A2A;
-  --sidebar-ring: #B8860B;
+  --sidebar-ring: #A0A0A0;
 }
 
 .dark {
-  --primary: #B8860B;
+  --primary: #A0A0A0;
   --primary-foreground: #FFFFFF;
-  --sidebar-primary: #B8860B;
+  --sidebar-primary: #A0A0A0;
   --sidebar-primary-foreground: #FFFFFF;
-  --background: #0A0A0A;
-  --foreground: #F0F0F0;
+  --background: #0F0F0F;
+  --foreground: #F5F5F5;
   --card: #1A1A1A;
-  --card-foreground: #F0F0F0;
+  --card-foreground: #F5F5F5;
   --popover: #1A1A1A;
-  --popover-foreground: #F0F0F0;
+  --popover-foreground: #F5F5F5;
   --secondary: #2A2A2A;
-  --secondary-foreground: #A0A0A0;
+  --secondary-foreground: #B0B0B0;
   --muted: #3A3A3A;
-  --muted-foreground: #808080;
-  --accent: #B8860B;
+  --muted-foreground: #909090;
+  --accent: #A0A0A0;
   --accent-foreground: #FFFFFF;
   --destructive: #EF4444;
   --destructive-foreground: #FFFFFF;

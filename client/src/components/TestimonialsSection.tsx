@@ -58,8 +58,8 @@ export default function TestimonialsSection() {
   return (
     <section id="testimonials" className="min-h-screen bg-black py-20 px-4 relative overflow-hidden">
       {/* Background decoration */}
-      <div className="absolute top-0 left-0 w-96 h-96 bg-amber-600/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-amber-600/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
+      <div className="absolute top-0 left-0 w-96 h-96 bg-gray-500/5 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gray-500/5 rounded-full blur-3xl translate-x-1/2 translate-y-1/2"></div>
 
       <div className="container mx-auto max-w-6xl relative z-10">
         {/* Section Header */}
@@ -70,9 +70,9 @@ export default function TestimonialsSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="text-amber-600 text-sm uppercase tracking-widest mb-4">Client Stories</p>
+          <p className="text-gray-500 text-sm uppercase tracking-widest mb-4">Client Stories</p>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-playfair">
-            Trusted by <span className="text-amber-600">Visionaries</span>
+            Trusted by <span className="text-gray-500">Visionaries</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             Hear from clients who transformed their vision into reality through our cinematic storytelling
@@ -95,8 +95,8 @@ export default function TestimonialsSection() {
               onClick={() => setActiveIndex(index)}
               className={`relative p-8 rounded-lg cursor-pointer transition-all duration-300 ${
                 activeIndex === index
-                  ? 'bg-gradient-to-br from-amber-900/30 to-black border border-amber-600/60 shadow-2xl shadow-amber-600/20'
-                  : 'bg-gradient-to-br from-amber-900/10 to-black border border-amber-600/20 hover:border-amber-600/40'
+                  ? 'bg-gradient-to-br from-gray-800/30 to-black border border-gray-500/60 shadow-2xl shadow-gray-500/20'
+                  : 'bg-gradient-to-br from-gray-800/10 to-black border border-gray-500/20 hover:border-gray-500/40'
               }`}
             >
               {/* Rating Stars */}
@@ -108,7 +108,7 @@ export default function TestimonialsSection() {
                     whileInView={{ opacity: 1, scale: 1 }}
                     transition={{ delay: i * 0.1 }}
                   >
-                    <Star size={16} className="fill-amber-600 text-amber-600" />
+                    <Star size={16} className="fill-gray-500 text-gray-500" />
                   </motion.div>
                 ))}
               </div>
@@ -128,12 +128,12 @@ export default function TestimonialsSection() {
                 <motion.img
                   src={testimonial.image}
                   alt={testimonial.name}
-                  className="w-12 h-12 rounded-full object-cover border border-amber-600/30"
+                  className="w-12 h-12 rounded-full object-cover border border-gray-500/30"
                   whileHover={{ scale: 1.1 }}
                 />
                 <div>
                   <p className="text-white font-semibold text-sm">{testimonial.name}</p>
-                  <p className="text-amber-600 text-xs">{testimonial.role}</p>
+                  <p className="text-gray-500 text-xs">{testimonial.role}</p>
                   <p className="text-gray-500 text-xs">{testimonial.company}</p>
                 </div>
               </div>
@@ -142,7 +142,7 @@ export default function TestimonialsSection() {
               {activeIndex === index && (
                 <motion.div
                   layoutId="activeIndicator"
-                  className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-600 to-amber-400"
+                  className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-gray-500 to-amber-400"
                   initial={{ scaleX: 0 }}
                   animate={{ scaleX: 1 }}
                   transition={{ duration: 0.5 }}
@@ -160,7 +160,7 @@ export default function TestimonialsSection() {
           viewport={{ once: true }}
           className="text-center"
         >
-          <button className="px-8 py-3 bg-amber-600 text-black font-semibold rounded hover:bg-amber-500 transition-colors duration-300">
+          <button className="px-8 py-3 bg-gray-500 text-black font-semibold rounded hover:bg-gray-400 transition-colors duration-300">
             Read More Stories
           </button>
         </motion.div>

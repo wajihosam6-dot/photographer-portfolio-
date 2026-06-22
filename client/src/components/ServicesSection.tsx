@@ -60,7 +60,7 @@ export default function ServicesSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="text-amber-600 text-sm uppercase tracking-widest mb-4">
+          <p className="text-gray-500 text-sm uppercase tracking-widest mb-4">
             What I Offer
           </p>
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -87,11 +87,11 @@ export default function ServicesSection() {
                 key={service.id}
                 variants={itemVariants}
                 whileHover={{ y: -10, boxShadow: '0 20px 40px rgba(184, 134, 11, 0.2)' }}
-                className="bg-gradient-to-br from-amber-900/10 to-black border border-amber-600/30 p-8 rounded-lg hover:border-amber-600/60 transition-all duration-300"
+                className="bg-gradient-to-br from-gray-800/10 to-black border border-gray-500/30 p-8 rounded-lg hover:border-gray-500/60 transition-all duration-300"
               >
                 <div className="mb-6">
-                  <div className="w-16 h-16 bg-amber-600/20 rounded-lg flex items-center justify-center mb-4">
-                    <Icon className="text-amber-600" size={32} />
+                  <div className="w-16 h-16 bg-gray-500/20 rounded-lg flex items-center justify-center mb-4">
+                    <Icon className="text-gray-500" size={32} />
                   </div>
                   <h3 className="text-2xl font-bold text-white mb-3">
                     {service.title}
@@ -102,7 +102,7 @@ export default function ServicesSection() {
                 <ul className="space-y-3 mb-8">
                   {service.features.map((feature, idx) => (
                     <li key={idx} className="flex items-center gap-3">
-                      <div className="w-2 h-2 bg-amber-600 rounded-full"></div>
+                      <div className="w-2 h-2 bg-gray-500 rounded-full"></div>
                       <span className="text-gray-300 text-sm">{feature}</span>
                     </li>
                   ))}
@@ -111,7 +111,7 @@ export default function ServicesSection() {
                 <motion.button
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
-                  className="w-full px-4 py-2 border border-amber-600 text-amber-600 text-sm uppercase tracking-widest hover:bg-amber-600 hover:text-black transition-all"
+                  className="w-full px-4 py-2 border border-gray-500 text-gray-500 text-sm uppercase tracking-widest hover:bg-gray-500 hover:text-black transition-all"
                 >
                   Learn More
                 </motion.button>
@@ -134,7 +134,7 @@ export default function ServicesSection() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 bg-amber-600 text-black font-semibold uppercase tracking-widest hover:bg-amber-500 transition-all"
+            className="px-8 py-3 bg-gray-500 text-black font-semibold uppercase tracking-widest hover:bg-gray-400 transition-all"
           >
             Book a Consultation
           </motion.button>

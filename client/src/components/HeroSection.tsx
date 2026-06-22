@@ -56,18 +56,18 @@ export default function HeroSection() {
       >
         <motion.div
           variants={itemVariants}
-          className="text-amber-600 text-sm uppercase tracking-widest mb-4"
+          className="text-gray-400 text-sm uppercase tracking-widest mb-4 font-medium"
         >
           Welcome to Lumière Photography
         </motion.div>
 
         <motion.h1
           variants={itemVariants}
-          className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight"
+          className="text-5xl md:text-7xl font-bold text-white mb-6 leading-tight font-playfair"
         >
           Capturing
           <br />
-          <span className="text-amber-600">Eternity</span>
+          <span className="text-gray-300">Eternity</span>
         </motion.h1>
 
         <motion.p
@@ -85,14 +85,14 @@ export default function HeroSection() {
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 bg-amber-600 text-black font-semibold uppercase tracking-widest hover:bg-amber-500 transition-all"
+            className="px-8 py-3 bg-gray-600 text-white font-semibold uppercase tracking-widest text-sm hover:bg-gray-500 transition-all"
           >
             Explore Work
           </motion.button>
           <motion.button
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="px-8 py-3 border border-amber-600 text-amber-600 font-semibold uppercase tracking-widest hover:bg-amber-600 hover:text-black transition-all"
+            className="px-8 py-3 border border-gray-500 text-gray-200 font-semibold uppercase tracking-widest text-sm hover:bg-gray-700/50 transition-all"
           >
             Get in Touch
           </motion.button>
@@ -105,7 +105,7 @@ export default function HeroSection() {
         transition={{ duration: 2, repeat: Infinity }}
         className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10"
       >
-        <ChevronDown className="text-amber-600" size={32} />
+        <ChevronDown className="text-gray-400" size={32} />
       </motion.div>
     </section>
   );

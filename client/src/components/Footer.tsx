@@ -9,7 +9,7 @@ export default function Footer() {
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="bg-black border-t border-amber-900/30 py-12 px-4"
+      className="bg-black border-t border-gray-800/30 py-12 px-4"
     >
       <div className="container mx-auto max-w-7xl">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
@@ -20,7 +20,7 @@ export default function Footer() {
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <h3 className="text-amber-600 font-bold text-lg mb-2">LUMIÈRE</h3>
+            <h3 className="text-gray-500 font-bold text-lg mb-2">LUMIÈRE</h3>
             <p className="text-gray-400 text-sm">
               Professional photography that captures the essence of life&apos;s most precious
               moments.
@@ -40,7 +40,7 @@ export default function Footer() {
                 <li key={item}>
                   <a
                     href={`#${item.toLowerCase()}`}
-                    className="text-gray-400 hover:text-amber-600 transition-colors text-sm"
+                    className="text-gray-400 hover:text-gray-500 transition-colors text-sm"
                   >
                     {item}
                   </a>
@@ -62,7 +62,7 @@ export default function Footer() {
                 <li key={item}>
                   <a
                     href="#"
-                    className="text-gray-400 hover:text-amber-600 transition-colors text-sm"
+                    className="text-gray-400 hover:text-gray-500 transition-colors text-sm"
                   >
                     {item}
                   </a>
@@ -83,7 +83,7 @@ export default function Footer() {
               <li>
                 <a
                   href="mailto:hello@lumiere.com"
-                  className="text-gray-400 hover:text-amber-600 transition-colors"
+                  className="text-gray-400 hover:text-gray-500 transition-colors"
                 >
                   hello@lumiere.com
                 </a>
@@ -91,7 +91,7 @@ export default function Footer() {
               <li>
                 <a
                   href="tel:+1234567890"
-                  className="text-gray-400 hover:text-amber-600 transition-colors"
+                  className="text-gray-400 hover:text-gray-500 transition-colors"
                 >
                   +1 (234) 567-890
                 </a>
@@ -102,16 +102,16 @@ export default function Footer() {
         </div>
 
         {/* Divider */}
-        <div className="border-t border-amber-900/30 py-8">
+        <div className="border-t border-gray-800/30 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-gray-500 text-sm">
               &copy; {currentYear} Lumière Photography. All rights reserved.
             </p>
             <div className="flex gap-6">
-              <a href="#" className="text-gray-500 hover:text-amber-600 transition-colors text-sm">
+              <a href="#" className="text-gray-500 hover:text-gray-500 transition-colors text-sm">
                 Privacy Policy
               </a>
-              <a href="#" className="text-gray-500 hover:text-amber-600 transition-colors text-sm">
+              <a href="#" className="text-gray-500 hover:text-gray-500 transition-colors text-sm">
                 Terms of Service
               </a>
             </div>

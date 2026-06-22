@@ -116,9 +116,9 @@ export default function StatsSection() {
           viewport={{ once: true }}
           className="text-center mb-20"
         >
-          <p className="text-amber-600 text-sm uppercase tracking-widest mb-4">By The Numbers</p>
+          <p className="text-gray-500 text-sm uppercase tracking-widest mb-4">By The Numbers</p>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-playfair">
-            Our <span className="text-amber-600">Impact</span>
+            Our <span className="text-gray-500">Impact</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
             A testament to our commitment to excellence and client satisfaction
@@ -138,10 +138,10 @@ export default function StatsSection() {
               key={stat.id}
               variants={itemVariants}
               whileHover={{ y: -10, scale: 1.05 }}
-              className="relative p-8 rounded-lg bg-gradient-to-br from-amber-900/20 to-black border border-amber-600/30 hover:border-amber-600/60 transition-all duration-300 group overflow-hidden"
+              className="relative p-8 rounded-lg bg-gradient-to-br from-gray-800/20 to-black border border-gray-500/30 hover:border-gray-500/60 transition-all duration-300 group overflow-hidden"
             >
               {/* Glow effect */}
-              <div className="absolute inset-0 bg-gradient-to-r from-amber-600/0 via-amber-600/10 to-amber-600/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-gray-500/0 via-gray-500/10 to-gray-500/0 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
 
               {/* Content */}
               <div className="relative z-10 text-center">
@@ -160,7 +160,7 @@ export default function StatsSection() {
                   whileInView={{ scale: 1 }}
                   transition={{ type: 'spring', stiffness: 100 }}
                 >
-                  <span className="text-5xl font-bold text-amber-600 font-playfair">
+                  <span className="text-5xl font-bold text-gray-500 font-playfair">
                     <AnimatedCounter target={stat.value} inView={isInView} />
                     {stat.suffix}
                   </span>
@@ -172,7 +172,7 @@ export default function StatsSection() {
 
               {/* Bottom accent line */}
               <motion.div
-                className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-amber-600/0 via-amber-600 to-amber-600/0"
+                className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-gray-500/0 via-gray-500 to-gray-500/0"
                 initial={{ scaleX: 0 }}
                 whileInView={{ scaleX: 1 }}
                 transition={{ delay: 0.3 }}
@@ -187,7 +187,7 @@ export default function StatsSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.5 }}
           viewport={{ once: true }}
-          className="bg-gradient-to-r from-amber-900/20 to-black border border-amber-600/30 p-12 rounded-lg text-center"
+          className="bg-gradient-to-r from-gray-800/20 to-black border border-gray-500/30 p-12 rounded-lg text-center"
         >
           <h3 className="text-2xl font-bold text-white mb-4 font-playfair">
             Featured in Top Photography Publications
@@ -200,7 +200,7 @@ export default function StatsSection() {
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
                   transition={{ delay: index * 0.1 }}
-                  className="text-sm font-semibold hover:text-amber-600 transition-colors"
+                  className="text-sm font-semibold hover:text-gray-500 transition-colors"
                 >
                   {publication}
                 </motion.div>

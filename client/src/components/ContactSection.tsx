@@ -58,7 +58,7 @@ export default function ContactSection() {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <p className="text-amber-600 text-sm uppercase tracking-widest mb-4">
+          <p className="text-gray-500 text-sm uppercase tracking-widest mb-4">
             Get in Touch
           </p>
           <h2 className="text-5xl md:text-6xl font-bold text-white mb-6">
@@ -80,14 +80,14 @@ export default function ContactSection() {
             className="space-y-6"
           >
             <motion.div variants={itemVariants} className="flex gap-4">
-              <div className="w-12 h-12 bg-amber-600/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                <Mail className="text-amber-600" size={24} />
+              <div className="w-12 h-12 bg-gray-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Mail className="text-gray-500" size={24} />
               </div>
               <div>
                 <h3 className="text-white font-semibold mb-2">Email</h3>
                 <a
                   href="mailto:hello@lumiere.com"
-                  className="text-gray-400 hover:text-amber-600 transition-colors"
+                  className="text-gray-400 hover:text-gray-500 transition-colors"
                 >
                   hello@lumiere.com
                 </a>
@@ -95,14 +95,14 @@ export default function ContactSection() {
             </motion.div>
 
             <motion.div variants={itemVariants} className="flex gap-4">
-              <div className="w-12 h-12 bg-amber-600/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                <Phone className="text-amber-600" size={24} />
+              <div className="w-12 h-12 bg-gray-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                <Phone className="text-gray-500" size={24} />
               </div>
               <div>
                 <h3 className="text-white font-semibold mb-2">Phone</h3>
                 <a
                   href="tel:+1234567890"
-                  className="text-gray-400 hover:text-amber-600 transition-colors"
+                  className="text-gray-400 hover:text-gray-500 transition-colors"
                 >
                   +1 (234) 567-890
                 </a>
@@ -110,8 +110,8 @@ export default function ContactSection() {
             </motion.div>
 
             <motion.div variants={itemVariants} className="flex gap-4">
-              <div className="w-12 h-12 bg-amber-600/20 rounded-lg flex items-center justify-center flex-shrink-0">
-                <MapPin className="text-amber-600" size={24} />
+              <div className="w-12 h-12 bg-gray-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                <MapPin className="text-gray-500" size={24} />
               </div>
               <div>
                 <h3 className="text-white font-semibold mb-2">Location</h3>
@@ -129,9 +129,9 @@ export default function ContactSection() {
                     href="#"
                     whileHover={{ scale: 1.2 }}
                     whileTap={{ scale: 0.9 }}
-                    className="w-10 h-10 bg-amber-600/20 rounded-lg flex items-center justify-center hover:bg-amber-600/40 transition-all"
+                    className="w-10 h-10 bg-gray-500/20 rounded-lg flex items-center justify-center hover:bg-gray-500/40 transition-all"
                   >
-                    <Icon className="text-amber-600" size={20} />
+                    <Icon className="text-gray-500" size={20} />
                   </motion.a>
                 ))}
               </div>
@@ -156,7 +156,7 @@ export default function ContactSection() {
                   value={formData.name}
                   onChange={handleChange}
                   placeholder="Your Name"
-                  className="w-full bg-amber-600/10 border border-amber-600/30 rounded px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-amber-600 transition-colors"
+                  className="w-full bg-gray-500/10 border border-gray-500/30 rounded px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-gray-500 transition-colors"
                   required
                 />
               </motion.div>
@@ -169,7 +169,7 @@ export default function ContactSection() {
                   value={formData.email}
                   onChange={handleChange}
                   placeholder="your@email.com"
-                  className="w-full bg-amber-600/10 border border-amber-600/30 rounded px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-amber-600 transition-colors"
+                  className="w-full bg-gray-500/10 border border-gray-500/30 rounded px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-gray-500 transition-colors"
                   required
                 />
               </motion.div>
@@ -183,7 +183,7 @@ export default function ContactSection() {
                 value={formData.subject}
                 onChange={handleChange}
                 placeholder="Project Subject"
-                className="w-full bg-amber-600/10 border border-amber-600/30 rounded px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-amber-600 transition-colors"
+                className="w-full bg-gray-500/10 border border-gray-500/30 rounded px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-gray-500 transition-colors"
                 required
               />
             </motion.div>
@@ -196,7 +196,7 @@ export default function ContactSection() {
                 onChange={handleChange}
                 placeholder="Tell me about your project..."
                 rows={6}
-                className="w-full bg-amber-600/10 border border-amber-600/30 rounded px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-amber-600 transition-colors resize-none"
+                className="w-full bg-gray-500/10 border border-gray-500/30 rounded px-4 py-3 text-white placeholder-gray-500 focus:outline-none focus:border-gray-500 transition-colors resize-none"
                 required
               ></textarea>
             </motion.div>
@@ -206,7 +206,7 @@ export default function ContactSection() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               type="submit"
-              className="w-full px-8 py-3 bg-amber-600 text-black font-semibold uppercase tracking-widest hover:bg-amber-500 transition-all"
+              className="w-full px-8 py-3 bg-gray-500 text-black font-semibold uppercase tracking-widest hover:bg-gray-400 transition-all"
             >
               Send Message
             </motion.button>
