@@ -39,7 +39,7 @@ export default function HeroSection() {
         className="absolute inset-0 z-0"
       >
         <img
-          src="https://d2xsxph8kpxj0f.cloudfront.net/310519663785791235/98PZcqGFv6KmqFmy42BtVJ/hero_cinematic_landscape-QmCGwUdQYUcaJttQTysEYA.png"
+          src="https://d2xsxph8kpxj0f.cloudfront.net/310519663785791235/98PZcqGFv6KmqFmy42BtVJ/hero_cinematic_landscape-jbYVXtiCxrf89e8B4ft3zd.webp"
           alt="Hero Background"
           className="w-full h-full object-cover"
         />

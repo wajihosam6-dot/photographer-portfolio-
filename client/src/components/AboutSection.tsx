@@ -35,7 +35,7 @@ export default function AboutSection() {
           >
             <div className="relative overflow-hidden rounded-lg shadow-2xl">
               <img
-                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663785791235/98PZcqGFv6KmqFmy42BtVJ/about_photographer-QmCGwUdQYUcaJttQTysEYA.png"
+                src="https://d2xsxph8kpxj0f.cloudfront.net/310519663785791235/98PZcqGFv6KmqFmy42BtVJ/about_photographer-WVd3uEhjDqf79rvwcsScXm.webp"
                 alt="About Photographer"
                 className="w-full h-full object-cover"
               />
