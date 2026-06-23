@@ -9,4 +9,3 @@ server
 shared
 template.json
 tsconfig.node.json
-vite.config.ts
