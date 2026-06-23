@@ -1,0 +1,12 @@
+.git
+.gitignore
+.manus
+.manus-logs
+node_modules
+pnpm-lock.yaml
+README.md
+server
+shared
+template.json
+tsconfig.node.json
+vite.config.ts
